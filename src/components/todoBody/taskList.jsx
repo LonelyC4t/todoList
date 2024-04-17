@@ -1,9 +1,23 @@
 import Task from "./task";
-import "./taskList.css"
+import "./taskList.css";
+import PropTypes from "prop-types";
 
 const TaskList = ({todos, deleteTask, completeTask, stateFilter}) => {
     
-    console.log(stateFilter);
+    TaskList.defaultProps = {
+        todos: {},
+        completeTask: () => {},
+        deleteTask: () => {},
+        stateFilter: undefined,
+    };
+
+    TaskList.propTypes = {
+        todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+        completeTask: PropTypes.func.isRequired,
+        deleteTask: PropTypes.func.isRequired,
+        stateFilter: PropTypes.oneOf([true, false, undefined]),
+    };
+
     let elementTask = todos.filter((el) => {
 
         if (stateFilter === true) {

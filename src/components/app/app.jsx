@@ -12,7 +12,8 @@ class App extends React.Component  {
         return {
             label,
             id: this.maxId++,
-            done: false
+            done: false,
+            createTime: new Date(),
         };
     };
 

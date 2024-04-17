@@ -8,7 +8,7 @@ const TaskFilter = ({filter}) => {
         <li><button onClick={filter}>Active</button></li>
         <li><button onClick={filter}>Completed</button></li>
     </ul>
-    )
+    );
 };
 
 export default TaskFilter;

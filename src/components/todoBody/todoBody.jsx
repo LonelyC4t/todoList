@@ -1,7 +1,7 @@
 import TaskList from "./taskList";
 import "./todoBody.css";
-
 import FooterTodo from "../footerTodo/footerTodo";
+
 const TodoBody = ({todos, deleteTask, completeTask, clearDone, filter, stateFilter}) => {
     
     return (
@@ -13,9 +13,8 @@ const TodoBody = ({todos, deleteTask, completeTask, clearDone, filter, stateFilt
             stateFilter = {stateFilter}
             />
             <FooterTodo filter = {filter} clearDone = {clearDone} todos = {todos}/>
-            
         </section>
-    )
-}
+    );
+};
 
 export default TodoBody;
